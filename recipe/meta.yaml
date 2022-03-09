@@ -9,6 +9,7 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/OpenEXR-{{ version }}.tar.gz
   sha256: 549f9acb107cd849d1dc7b6424fc4bc9c716933ca227198e08ddca24827d3ada
   patches:
+    - exr3-linkage.patch
     - windows-fix.patch  # [win]
 
 build:
@@ -18,12 +19,10 @@ requirements:
   build:
     - {{ compiler('cxx') }}
   host:
-    - ilmbase
     - openexr
     - pip
     - python
   run:
-    - ilmbase
     - openexr
     - python
 
