@@ -22,6 +22,7 @@ requirements:
     - openexr
     - pip
     - python
+    - zlib  # [win] -- for Library/lib/z.lib
   run:
     - openexr
     - python
