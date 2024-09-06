@@ -23,6 +23,7 @@ requirements:
     - openexr
     - pip
     - python
+    - setuptools
     - zlib
   run:
     - openexr
