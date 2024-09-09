@@ -13,15 +13,17 @@ source:
     - windows-fix.patch  # [win]
 
 build:
-  number: 3
+  number: 4
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - openexr
     - pip
     - python
+    - setuptools
     - zlib
   run:
     - openexr
