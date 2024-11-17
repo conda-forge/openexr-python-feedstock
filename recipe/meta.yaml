@@ -1,3 +1,8 @@
+# Note: if you're updating this recipe for a new upstream release, make sure
+# that the value of c_stdlib_version (MACOSX_DEPLOYMENT_TARGET) in
+# `conda_build_config.yaml` stays synchronized with what upstream has in its
+# `pyproject.toml` scikit-build configuration.
+
 {% set name = "OpenEXR" %}
 {% set version = "3.3.2" %}
 
