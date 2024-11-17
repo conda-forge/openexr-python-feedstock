@@ -14,15 +14,19 @@ build:
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
+    - {{ compiler("cxx") }}
     - {{ stdlib("c") }}
+    - cmake
+    - make
   host:
     - openexr
     - pip
+    - pybind11
     - python
-    - setuptools
+    - scikit-build-core
     - zlib
   run:
+    - numpy
     - openexr
     - python
 
