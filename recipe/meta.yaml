@@ -4,7 +4,7 @@
 # `pyproject.toml` scikit-build configuration.
 
 {% set name = "OpenEXR" %}
-{% set version = "3.4.0" %}
+{% set version = "3.4.4" %}
 
 package:
   name: openexr-python  # clash with existing openexr C++ library
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: 022d059e089ddf6c5fcc3085c65418be52c6d871317d72e04f4228ea11fe65eb
+  sha256: 9bf1f559a3133bb9c5cbfdea74d867816a06a654189ecbc6b3b44c8276fa0441
 
 build:
   number: 0
