@@ -29,6 +29,8 @@ requirements:
     - cmake
     - make
   host:
+    - imath
+    - libdeflate
     - openjph
     - pip
     - pybind11
