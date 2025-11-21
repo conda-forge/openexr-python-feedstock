@@ -3,11 +3,16 @@
 # `conda_build_config.yaml` stays synchronized with what upstream has in its
 # `pyproject.toml` scikit-build configuration.
 
+# Also note: due to the way the software is packaged, these Python bindings
+# cannot reuse the shared library provided by the `openexr` package, as far as I
+# can tell. So this package is actually independent of that one, but builds a
+# lot of the same C++ code.
+
 {% set name = "OpenEXR" %}
 {% set version = "3.4.4" %}
 
 package:
-  name: openexr-python  # clash with existing openexr C++ library
+  name: openexr-python  # distinguish from the `openexr` C++ library package
   version: {{ version }}
 
 source:
@@ -24,7 +29,7 @@ requirements:
     - cmake
     - make
   host:
-    - openexr
+    - openjph
     - pip
     - pybind11
     - python
@@ -32,7 +37,6 @@ requirements:
     - zlib
   run:
     - numpy
-    - openexr
     - python
 
 test:
