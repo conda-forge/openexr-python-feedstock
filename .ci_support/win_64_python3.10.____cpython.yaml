@@ -6,8 +6,8 @@ channel_targets:
 - conda-forge main
 cxx_compiler:
 - vs2022
-openexr:
-- '3.4'
+openjph:
+- '0.25'
 pin_run_as_build:
   python:
     min_pin: x.x
