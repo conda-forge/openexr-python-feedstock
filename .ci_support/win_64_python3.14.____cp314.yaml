@@ -1,13 +1,17 @@
 c_stdlib:
 - vs
 channel_sources:
-- conda-forge,conda-forge/label/python_rc
+- conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
 - vs2022
-openexr:
-- '3.4'
+imath:
+- 3.2.2
+libdeflate:
+- '1.25'
+openjph:
+- '0.25'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -16,8 +20,5 @@ python:
 - 3.14.* *_cp314
 target_platform:
 - win-64
-zip_keys:
-- - python
-  - channel_sources
 zlib:
 - '1'
