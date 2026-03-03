@@ -1,7 +1,7 @@
-# Note: if you're updating this recipe for a new upstream release, make sure
-# that the value of c_stdlib_version (MACOSX_DEPLOYMENT_TARGET) in
-# `conda_build_config.yaml` stays synchronized with what upstream has in its
-# `pyproject.toml` scikit-build configuration.
+# Note: make sure that the value of c_stdlib_version (MACOSX_DEPLOYMENT_TARGET)
+# in `conda_build_config.yaml` stays synchronized with `macos-platform.patch`
+# and/or what upstream expects in the scikit-build config in its
+# `pyproject.toml` file.
 
 # Also note: due to the way the software is packaged, these Python bindings
 # cannot reuse the shared library provided by the `openexr` package, as far as I
@@ -9,7 +9,7 @@
 # lot of the same C++ code.
 
 {% set name = "OpenEXR" %}
-{% set version = "3.4.5" %}
+{% set version = "3.4.6" %}
 
 package:
   name: openexr-python  # distinguish from the `openexr` C++ library package
@@ -17,7 +17,9 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: 74ade27b73789f24d0f35d6095a27771de01fea47a30980f2d98613cb5e3cec9
+  sha256: 7a624f884534a8a811c45f779ec2a4260907c376a9136bb5aff56c0139078a29
+  patches:
+    - macos-platform.patch  # [osx]
 
 build:
   number: 0
