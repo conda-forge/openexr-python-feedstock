@@ -1,5 +1,5 @@
 diff --git a/pyproject.toml b/pyproject.toml
-index 24cd6fd..254de27 100644
+index 0179bff..77de13c 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
 @@ -71,7 +71,7 @@ OPENEXR_FORCE_INTERNAL_IMATH = 'ON'
@@ -11,9 +11,12 @@ index 24cd6fd..254de27 100644
  CMAKE_POSITION_INDEPENDENT_CODE = 'ON'
  CMAKE_VERBOSE_MAKEFILE = 'ON'
  
-@@ -88,4 +88,4 @@ manylinux-aarch64-image = "manylinux2014"
+@@ -88,7 +88,5 @@ manylinux-aarch64-image = "manylinux2014"
  
  # Needed for full C++17 support
  [tool.cibuildwheel.macos.environment]
 -MACOSX_DEPLOYMENT_TARGET = "10.15"
+-# pass compilers directly to avoid Homebrew LLVM libunwind
+-CMAKE_ARGS = "-DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++"
 +MACOSX_DEPLOYMENT_TARGET = "11.0"
+ 
