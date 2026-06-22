@@ -9,7 +9,7 @@
 # lot of the same C++ code.
 
 {% set name = "OpenEXR" %}
-{% set version = "3.4.12" %}
+{% set version = "3.4.13" %}
 
 package:
   name: openexr-python  # distinguish from the `openexr` C++ library package
@@ -17,12 +17,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: 877da800b30146e5e29851da2a80147883244966f5b2e932e04f1f1a06ff4fc7
+  sha256: ae5135e39ff0b9086a56e02f3d8b5cf52c5ca7cfcde5e57080b1c12c82e3ec8a
   patches:
     - macos-platform.patch  # [osx]
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
