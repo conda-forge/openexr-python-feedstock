@@ -37,7 +37,7 @@ requirements:
     - pip
     - pybind11
     - python
-    - scikit-build-core
+    - scikit-build-core <1.0  # upstream not compatible as of 3.4.13 (2026 Aug); can probably relax this soon
     - zlib
   run:
     - numpy
