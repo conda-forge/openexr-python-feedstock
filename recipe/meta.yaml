@@ -30,15 +30,17 @@ requirements:
     - {{ stdlib("c") }}
     - cmake
     - make
+    - pkg-config
   host:
     - imath
     - libdeflate
-    - openjph
+    - openjph >=0.32
     - pip
     - pybind11
     - python
     - scikit-build-core <1.0  # upstream not compatible as of 3.4.13 (2026 Aug); can probably relax this soon
     - zlib
+    - zstd
   run:
     - numpy
     - python
