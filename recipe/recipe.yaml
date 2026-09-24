@@ -27,10 +27,6 @@ source:
 
 build:
   number: 0
-  variant:
-    # we don't want separate jobs if the newest python is in release candidate phase
-    ignore_keys:
-      - channel_sources
 
 requirements:
   build:
