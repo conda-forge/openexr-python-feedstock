@@ -16,8 +16,6 @@ imath:
 - 3.2.2
 libdeflate:
 - '1.25'
-openjph:
-- '0.31'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -31,3 +29,5 @@ zip_keys:
   - channel_sources
 zlib:
 - '1'
+zstd:
+- '1.5'
