@@ -12,7 +12,7 @@ schema_version: 1
 
 context:
   name: OpenEXR
-  version: "3.5.0"
+  version: "3.5.1"
 
 package:
   name: openexr-python  # distinguish from the `openexr` C++ library package
@@ -20,7 +20,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/${{ name|lower }}-${{ version }}.tar.gz
-  sha256: 1c49909e48e57a313de5c23477e3ebda09a14c97bbdf93a2393da2a1aef1eb41
+  sha256: e48d64bc8388ed18eff2f76007034ee3d48f276dbbac08e6c66389a3bb3e9ec7
   patches:
     - if: osx
       then: macos-platform.patch
