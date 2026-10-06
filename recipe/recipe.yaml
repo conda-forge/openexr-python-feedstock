@@ -38,7 +38,7 @@ requirements:
   host:
     - imath
     - libdeflate
-    - openjph >=0.32.0
+    - openjph
     - pip
     - pybind11
     - python
