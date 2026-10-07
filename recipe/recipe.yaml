@@ -26,7 +26,7 @@ source:
       then: macos-platform.patch
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -38,7 +38,7 @@ requirements:
   host:
     - imath
     - libdeflate
-    - openjph >=0.32.0
+    - openjph
     - pip
     - pybind11
     - python
