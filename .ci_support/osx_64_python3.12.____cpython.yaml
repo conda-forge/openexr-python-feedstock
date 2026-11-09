@@ -1,15 +1,23 @@
+MACOSX_SDK_VERSION:
+- '11.0'
 c_stdlib:
-- vs
+- macosx_deployment_target
+c_stdlib_version:
+- '11.0'
 channel_sources:
-- conda-forge,conda-forge/label/python_rc
+- conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2022
+- clangxx
+cxx_compiler_version:
+- '21'
 imath:
 - 3.2.3
 libdeflate:
 - '1.25'
+macos_machine:
+- x86_64-apple-darwin13.4.0
 openjph:
 - '0.32'
 pin_run_as_build:
@@ -17,12 +25,9 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.15.* *_cp315
+- 3.12.* *_cpython
 target_platform:
-- win-64
-zip_keys:
-- - python
-  - channel_sources
+- osx-64
 zlib:
 - '1'
 zstd:
