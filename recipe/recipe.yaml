@@ -34,7 +34,7 @@ requirements:
     - ${{ stdlib("c") }}
     - cmake
     - make
-    - pkg-config
+    - pkgconf
   host:
     - imath
     - libdeflate
